@@ -29,60 +29,71 @@ logForgingPatterns:
 testSuites:
   - category: anonymous_invalid
     scenario: anonymous_invalid
+    severity: Major
     assertions:
       - "@StatusCode != 200"
       
   - category: auth_invalid
     scenario: auth_invalid
-    assertions:
+    assertions: Major
       - "@StatusCode != 200"
       
   - category: DDOS
     scenario: DDOS
+    assertions: Major
     assertions:
       - "@StatusCode != 200"
       
   - category: XSS_Injection
     scenario: XSS_Injection
+    assertions: Major
     assertions:
       - "@StatusCode != 200"
       
   - category: sql_injection
     scenario: sql_injection
+    assertions: Major
     assertions:
       - "@StatusCode != 200"
 
   - category: log_forging
     scenario: log_forging
+    assertions: Major
     assertions:
       - "@StatusCode != 200"
 
   - category: invalid_datatype
     scenario: invalid_datatype
+    assertions: Minor
     assertions:
       - "@StatusCode != 200"
 
   - category: special_chars
     scenario: special_chars
+    assertions: Minor
     assertions:
       - "@StatusCode != 200"
 
   - category: negative
     scenario: negative
+    assertions: Minor
     assertions:
       - "@StatusCode != 200"
       
   - category: null_value
     scenario: null_value
+    assertions: Minor
     assertions:
       - "@StatusCode != 200"
 
   - category: empty_value
     scenario: empty_value
+    assertions: Minor
     assertions:
       - "@StatusCode != 200"
 
   - category: create
     scenario: create
+    assertions: Minor
     assertions:
       - "@StatusCode == 200"
