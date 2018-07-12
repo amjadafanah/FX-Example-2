@@ -27,13 +27,13 @@ logForgingPatterns:
   - "ERROR:"
   
 testSuites:
-  - category: anonymous_invalid
+  - category: UnSecured
     scenario: anonymous_invalid
     severity: Major
     assertions:
       - "@StatusCode != 200"
       
-  - category: auth_invalid
+  - category: UnSecured
     scenario: auth_invalid
     severity: Major
     assertions:
@@ -51,19 +51,19 @@ testSuites:
     assertions:
       - "@StatusCode != 200"
       
-  - category: sql_injection
+  - category: SQL_Injection
     scenario: sql_injection
     severity: Major
     assertions:
       - "@StatusCode != 200"
 
-  - category: log_forging
+  - category: Log_Forging
     scenario: log_forging
     severity: Major
     assertions:
       - "@StatusCode != 200"
 
-  - category: invalid_datatype
+  - category: Negative
     scenario: invalid_datatype
     severity: Minor
     assertions:
@@ -75,25 +75,25 @@ testSuites:
     assertions:
       - "@StatusCode != 200"
 
-  - category: negative
+  - category: Negative
     scenario: negative
     severity: Minor
     assertions:
       - "@StatusCode != 200"
       
-  - category: null_value
+  - category: Negative
     scenario: null_value
     severity: Minor
     assertions:
       - "@StatusCode != 200"
 
-  - category: empty_value
+  - category: Negative
     scenario: empty_value
     severity: Minor
     assertions:
       - "@StatusCode != 200"
 
-  - category: create
+  - category: Functional
     scenario: create
     severity: Minor
     assertions:
